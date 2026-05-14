@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TUTOR_PET" directorySegmentName="seg_0" id="C22F9EF5-8AFC-8761-3AC0-05180EE305EE">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 19:09:14 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>2A5237D6-5194-542F-FD5E-CD8E607C7399</sourcePk>
+<targetPk>0F5EC767-5348-C0A1-18CB-DA7B000BEA07</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1EDCB0C3-6E2C-FDA7-14C3-9FAEF78D3ABE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>33B192D7-569E-D98C-908A-DB13F39A733F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

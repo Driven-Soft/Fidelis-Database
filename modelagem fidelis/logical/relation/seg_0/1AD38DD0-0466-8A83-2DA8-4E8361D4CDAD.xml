@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLINICA_VETERINARIO" directorySegmentName="seg_0" id="1AD38DD0-0466-8A83-2DA8-4E8361D4CDAD">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 19:16:06 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>ED6D8B1D-03B2-238A-CF82-6465FB8BB412</sourcePk>
+<targetPk>99F57A23-8AF9-D536-1CFB-6C9D86595006</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0D1EA5C5-BCEB-CC31-80E6-392081D89883</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DD6F50EA-04AF-2940-8FAD-FAF68041FD63</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

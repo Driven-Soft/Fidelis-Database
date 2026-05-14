@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelagem fidelis" id="67F132C2-1B90-52E7-1E3C-CC052AB7D8AA" version="3.5">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 18:12:39 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>67F132C2-1B90-52E7-1E3C-CC052AB7D8AA</designId>
+</OSDM_Design>

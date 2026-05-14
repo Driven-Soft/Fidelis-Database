@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PET_VACINACAO" directorySegmentName="seg_0" id="E703B806-72A9-BFCA-6F70-7FF867EC8623">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 19:37:14 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>0F5EC767-5348-C0A1-18CB-DA7B000BEA07</sourcePk>
+<targetPk>C11F46EC-7040-4AC3-BC09-6D0FC1F70766</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33B192D7-569E-D98C-908A-DB13F39A733F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C5093E8C-551D-01E4-A012-B071A4C51B2D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

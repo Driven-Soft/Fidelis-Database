@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="8446F7E6-82A5-4C39-DCF1-74AD455F7D70" mainViewID="54076708-ABDE-3D4F-AED5-5A93867E49F6">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 18:12:39 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
