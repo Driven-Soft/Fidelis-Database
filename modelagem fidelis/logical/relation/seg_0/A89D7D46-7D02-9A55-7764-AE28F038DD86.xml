@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CONSULTA_PRESCRICAO" directorySegmentName="seg_0" id="A89D7D46-7D02-9A55-7764-AE28F038DD86">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-14 23:53:45 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>4550EDA9-5784-4321-7489-EF33E9673475</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>14DD4063-4E2D-2207-CBD3-D910000D11E3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5F53487E-A99B-3AA4-826B-D11443D735AC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

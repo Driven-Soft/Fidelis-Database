@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VETERINARIO_CONSULTA" directorySegmentName="seg_0" id="2DE71F36-EB7E-A978-120F-03173DF70344">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-14 23:42:16 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>99F57A23-8AF9-D536-1CFB-6C9D86595006</sourcePk>
+<targetPk>4550EDA9-5784-4321-7489-EF33E9673475</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DD6F50EA-04AF-2940-8FAD-FAF68041FD63</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>14DD4063-4E2D-2207-CBD3-D910000D11E3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

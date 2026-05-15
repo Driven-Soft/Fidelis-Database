@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CONSULTA_EXAME" directorySegmentName="seg_0" id="7FE33610-81A6-DB6B-1FE4-A6A5C2C16D78">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-14 23:50:14 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>4550EDA9-5784-4321-7489-EF33E9673475</sourcePk>
+<targetPk>2D763C8E-78FB-2D19-E9F2-D9FE30CBB62C</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>14DD4063-4E2D-2207-CBD3-D910000D11E3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8C3E3510-24B3-8702-E907-F246F03EA8FF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

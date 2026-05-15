@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRESCRICAO_MEDICAMENTO" directorySegmentName="seg_0" id="FC5990A4-A5EE-A446-6FF2-A15FD3E3AC2C">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 00:00:50 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>3DCCFBBC-443C-4737-E852-F2C0F4796D3D</sourcePk>
+<targetPk>088F83A7-1623-FFA7-DE39-9E0159F5EB1D</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5F53487E-A99B-3AA4-826B-D11443D735AC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A20683C9-35DF-CA92-DF12-49A7042E0C5B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
