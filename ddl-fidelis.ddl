@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 24.3.1.351.0831
---   em:        2026-05-15 11:19:49 BRT
+--   em:        2026-05-15 11:44:25 BRT
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -15,8 +15,8 @@ CREATE TABLE CLINICA
      nome     VARCHAR2 (100 CHAR)  NOT NULL , 
      cnpj     VARCHAR2 (18 CHAR)  NOT NULL , 
      telefone VARCHAR2 (15 CHAR)  NOT NULL , 
-     email    VARCHAR2 (255 CHAR)  NOT NULL , 
-     endereco VARCHAR2 (255 CHAR)  NOT NULL 
+     email    BLOB  NOT NULL , 
+     endereco BLOB  NOT NULL 
     ) 
 ;
 
@@ -27,7 +27,7 @@ CREATE TABLE COMPORTAMENTO
     ( 
      id        INTEGER  NOT NULL , 
      data      DATE  NOT NULL , 
-     descricao VARCHAR2 (255 CHAR)  NOT NULL , 
+     descricao BLOB  NOT NULL , 
      PET_id    INTEGER 
     ) 
 ;
@@ -40,8 +40,8 @@ CREATE TABLE CONSULTA
      id             INTEGER  NOT NULL , 
      data_hora      DATE  NOT NULL , 
      tipo           VARCHAR2 (50 CHAR)  NOT NULL , 
-     diagnostico    VARCHAR2 (75 CHAR) , 
-     observacoes    VARCHAR2 (255 CHAR) , 
+     diagnostico    BLOB , 
+     observacoes    BLOB , 
      data_retorno   DATE , 
      VETERINARIO_id INTEGER , 
      PET_id         INTEGER 
@@ -55,8 +55,8 @@ CREATE TABLE EXAME
     ( 
      id          INTEGER  NOT NULL , 
      tipo        VARCHAR2 (50 CHAR)  NOT NULL , 
-     descricao   VARCHAR2 (255 CHAR)  NOT NULL , 
-     resultado   VARCHAR2 (255 CHAR) , 
+     descricao   BLOB  NOT NULL , 
+     resultado   BLOB , 
      data        DATE  NOT NULL , 
      CONSULTA_id INTEGER 
     ) 
@@ -70,7 +70,7 @@ CREATE TABLE HISTORICO_PESO
      id           INTEGER  NOT NULL , 
      peso_kg      NUMBER (7,2)  NOT NULL , 
      data_medicao DATE  NOT NULL , 
-     observacao   VARCHAR2 (255 CHAR)  NOT NULL , 
+     observacao   BLOB  NOT NULL , 
      PET_id       INTEGER 
     ) 
 ;
@@ -82,7 +82,7 @@ CREATE TABLE LEMBRETE
     ( 
      id            INTEGER  NOT NULL , 
      tipo          VARCHAR2 (50 CHAR)  NOT NULL , 
-     descricao     VARCHAR2 (255 CHAR)  NOT NULL , 
+     descricao     BLOB  NOT NULL , 
      data_prevista DATE  NOT NULL , 
      status        CHAR (1 CHAR)  NOT NULL , 
      TUTOR_id      INTEGER , 
@@ -99,7 +99,8 @@ CREATE TABLE MEDICAMENTO
      nome            VARCHAR2 (50 CHAR)  NOT NULL , 
      principio_ativo VARCHAR2 (50 CHAR)  NOT NULL , 
      forma           VARCHAR2 (50 CHAR)  NOT NULL , 
-     PRESCRICAO_id   INTEGER  NOT NULL 
+     PRESCRICAO_id   INTEGER  NOT NULL , 
+     descricao       BLOB  NOT NULL 
     ) 
 ;
 
@@ -114,10 +115,11 @@ CREATE TABLE PET
      raca            VARCHAR2 (20 CHAR)  NOT NULL , 
      sexo            CHAR (1 CHAR)  NOT NULL , 
      data_nascimento DATE  NOT NULL , 
-     foto_url        VARCHAR2 (255 CHAR)  NOT NULL , 
+     foto_url        BLOB  NOT NULL , 
      status          CHAR (1)  NOT NULL , 
      TUTOR_id        INTEGER , 
-     CLINICA_id      INTEGER 
+     CLINICA_id      INTEGER , 
+     status2         CHAR (1)  NOT NULL 
     ) 
 ;
 
@@ -130,7 +132,7 @@ CREATE TABLE PRESCRICAO
      dosagem      VARCHAR2 (10 CHAR)  NOT NULL , 
      frequencia   VARCHAR2 (50 CHAR)  NOT NULL , 
      duracao_dias INTEGER  NOT NULL , 
-     observacao   VARCHAR2 (255 CHAR)  NOT NULL , 
+     observacao   BLOB  NOT NULL , 
      CONSULTA_id  INTEGER 
     ) 
 ;
@@ -142,7 +144,7 @@ CREATE TABLE RECOMENDACAO
     ( 
      id                INTEGER  NOT NULL , 
      tipo              VARCHAR2 (50 CHAR)  NOT NULL , 
-     descricao         VARCHAR2 (255 CHAR)  NOT NULL , 
+     descricao         BLOB  NOT NULL , 
      data_recomendacao DATE  NOT NULL , 
      PET_id            INTEGER 
     ) 
@@ -153,11 +155,15 @@ ALTER TABLE RECOMENDACAO
 
 CREATE TABLE TUTOR 
     ( 
-     id         INTEGER  NOT NULL , 
-     telefone   VARCHAR2 (15 CHAR)  NOT NULL , 
-     cpf        VARCHAR2 (14 CHAR)  NOT NULL , 
-     endereco   VARCHAR2 (255 CHAR)  NOT NULL , 
-     USUARIO_id INTEGER  NOT NULL 
+     id           INTEGER  NOT NULL , 
+     telefone     VARCHAR2 (15 CHAR)  NOT NULL , 
+     cpf          VARCHAR2 (14 CHAR)  NOT NULL , 
+     endereco     BLOB  NOT NULL , 
+     USUARIO_id   INTEGER  NOT NULL , 
+     nome         VARCHAR2 (75 CHAR)  NOT NULL , 
+     email        VARCHAR2 (75 CHAR)  NOT NULL , 
+     senha        VARCHAR2 (50 CHAR)  NOT NULL , 
+     data_criacao DATE  NOT NULL 
     ) 
 ;
 
@@ -192,13 +198,14 @@ ALTER TABLE VACINA
 
 CREATE TABLE VACINACAO 
     ( 
-     id             INTEGER  NOT NULL , 
-     data_aplicacao DATE  NOT NULL , 
-     data_proxima   DATE  NOT NULL , 
-     observacao     VARCHAR2 (255 CHAR) , 
-     PET_id         INTEGER , 
-     VACINA_id      INTEGER , 
-     VETERINARIO_id INTEGER 
+     id              INTEGER  NOT NULL , 
+     data_aplicacao  DATE  NOT NULL , 
+     data_proxima    DATE  NOT NULL , 
+     observacao      BLOB , 
+     PET_id          INTEGER , 
+     VACINA_id       INTEGER , 
+     vacina_aplicada VARCHAR2 (50 CHAR)  NOT NULL , 
+     VETERINARIO_id  INTEGER 
     ) 
 ;
 
@@ -207,12 +214,13 @@ ALTER TABLE VACINACAO
 
 CREATE TABLE VERMIFUGACAO 
     ( 
-     id             INTEGER  NOT NULL , 
-     produto        VARCHAR2 (50 CHAR)  NOT NULL , 
-     data_aplicacao DATE  NOT NULL , 
-     data_proxima   DATE  NOT NULL , 
-     PET_id         INTEGER , 
-     VETERINARIO_id INTEGER 
+     id              INTEGER  NOT NULL , 
+     produto         VARCHAR2 (50 CHAR)  NOT NULL , 
+     data_aplicacao  DATE  NOT NULL , 
+     data_proxima    DATE  NOT NULL , 
+     PET_id          INTEGER , 
+     VETERINARIO_id  INTEGER , 
+     VETERINARIO_id2 INTEGER 
     ) 
 ;
 
@@ -225,7 +233,11 @@ CREATE TABLE VETERINARIO
      crmv          VARCHAR2 (13 CHAR)  NOT NULL , 
      especialidade VARCHAR2 (50 CHAR)  NOT NULL , 
      USUARIO_id    INTEGER  NOT NULL , 
-     CLINICA_id    INTEGER 
+     CLINICA_id    INTEGER , 
+     nome          VARCHAR2 (75 CHAR)  NOT NULL , 
+     email         VARCHAR2 (75 CHAR)  NOT NULL , 
+     senha         VARCHAR2 (50 CHAR)  NOT NULL , 
+     data_criacao  DATE  NOT NULL 
     ) 
 ;
 

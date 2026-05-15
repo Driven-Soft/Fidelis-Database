@@ -70,6 +70,17 @@
 <colAssociation fkAssociation="BDAF64F2-6D76-3F00-28C9-265ED9298930" referredColumn="6C3E13C3-C96A-2F61-F627-FEB81AA3D42F"/>
 </associations>
 </Column>
+<Column name="descricao" id="2A8D60F3-0A4D-3AF4-3E83-DA628184F158">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>8B67D606-446D-908A-3B91-8E7E76BD46AF</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="2C0A8745-9566-929A-C5E3-780B23264092" name="MEDICAMENTO_PK">

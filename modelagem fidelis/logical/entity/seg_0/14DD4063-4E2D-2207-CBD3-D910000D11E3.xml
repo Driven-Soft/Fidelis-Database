@@ -62,9 +62,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>75 CHAR</dataTypeSize>
-<ownDataTypeParameters>75 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="observacoes" id="8AB784A6-4F50-7B31-DB49-666C95C1AE04">
 <createdBy>shhit</createdBy>
@@ -76,9 +75,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255 CHAR</dataTypeSize>
-<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_retorno" id="AB5C980E-927B-B9B4-32CD-C34F52737CEB">
 <createdBy>shhit</createdBy>
@@ -129,8 +127,9 @@
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-14 23:40:22 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

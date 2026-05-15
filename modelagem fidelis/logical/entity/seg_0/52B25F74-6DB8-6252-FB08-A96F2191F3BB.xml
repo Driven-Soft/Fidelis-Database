@@ -49,9 +49,8 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255 CHAR</dataTypeSize>
-<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="data_recomendacao" id="C7B88FE6-30DF-3337-3F7E-5535C31CAF5C">
 <createdBy>shhit</createdBy>
@@ -86,8 +85,9 @@
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 13:45:24 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

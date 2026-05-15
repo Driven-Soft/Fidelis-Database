@@ -40,31 +40,17 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="principio_ativo" id="831D5BCC-DE1B-EEE7-A625-4277E141041A">
+<Attribute name="descricao" id="8B67D606-446D-908A-3B91-8E7E76BD46AF">
 <createdBy>shhit</createdBy>
-<createdTime>2026-05-14 23:57:26 UTC</createdTime>
+<createdTime>2026-05-15 14:22:50 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="forma" id="9FBA5C37-8220-7A84-5BCD-4F52A3D560A7">
-<createdBy>shhit</createdBy>
-<createdTime>2026-05-15 00:00:16 UTC</createdTime>
-<ownerDesignName>modelagem fidelis</ownerDesignName>
-<engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id1" id="2FD7DAD4-F044-1FED-A0CC-43C860069C8C">
 <createdBy>shhit</createdBy>
@@ -86,8 +72,9 @@
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 00:00:36 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

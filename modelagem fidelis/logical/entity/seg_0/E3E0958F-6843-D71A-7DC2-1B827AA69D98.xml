@@ -79,10 +79,10 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id2" id="8C68C8BE-DC1F-E9CB-18CF-9140CC6745D2">
+<Attribute name="id2" id="045165BE-7686-A280-E7CA-C56EABD409C3">
 <createdBy>shhit</createdBy>
-<createdTime>2026-05-15 13:36:02 UTC</createdTime>
-<generatorID>80F599FE-4881-FF3F-3416-8C4CCAFFBE04</generatorID>
+<createdTime>2026-05-15 14:36:25 UTC</createdTime>
+<generatorID>91CA2341-2692-267A-1BAB-06AD7555C29B</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -100,8 +100,9 @@
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 19:34:27 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

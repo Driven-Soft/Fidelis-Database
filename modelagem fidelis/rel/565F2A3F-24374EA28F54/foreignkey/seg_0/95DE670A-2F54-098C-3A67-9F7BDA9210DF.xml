@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3BA0CBB-4488-DFBD-1FD7-2AEAF53282C5" containerWithKeyObject="633641F1-6DE3-6BC0-92C4-760F4733CF0F" localFKIndex="0224EEFF-C341-345E-8054-CF11B661D97A" name="VACINACAO_VETERINARIO_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="95DE670A-2F54-098C-3A67-9F7BDA9210DF" containerWithKeyObject="633641F1-6DE3-6BC0-92C4-760F4733CF0F" localFKIndex="F6162522-B72B-C408-32DA-7E80253B9D6F" name="VACINACAO_VETERINARIO_FKv2">
 <createdBy>shhit</createdBy>
-<createdTime>2026-05-15 13:47:25 UTC</createdTime>
-<generatorID>2C6C0F14-90D3-3656-DCF2-7919DCF06E8E</generatorID>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>0FA76E14-D3CA-A941-6A6B-7274BFB56252</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <referredTableLongName>VETERINARIO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

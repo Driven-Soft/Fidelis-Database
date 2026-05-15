@@ -27,19 +27,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="telefone" id="F21BAF15-FFC2-E27B-2084-B9BB8269B56F">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:38:10 UTC</createdTime>
-<ownerDesignName>modelagem fidelis</ownerDesignName>
-<engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="cpf" id="9DB2C3DA-8FB7-C095-E32B-DD01CB368DFB">
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 18:38:45 UTC</createdTime>
@@ -53,6 +40,58 @@
 <dataTypeSize>14 CHAR</dataTypeSize>
 <ownDataTypeParameters>14 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nome" id="A45A6131-F1B6-14C0-C578-97D506D2E3C8">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:24:38 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75 CHAR</dataTypeSize>
+<ownDataTypeParameters>75 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="462C19E1-9287-31A9-1B0C-19624188AA83">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:25:01 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75 CHAR</dataTypeSize>
+<ownDataTypeParameters>75 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="senha" id="21F822F2-F5D3-F6AB-78D3-F43982E95850">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:25:25 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefone" id="F21BAF15-FFC2-E27B-2084-B9BB8269B56F">
+<createdBy>Chiemi Hayashi</createdBy>
+<createdTime>2026-05-14 18:38:10 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="endereco" id="40D6C1EB-D72B-9DFF-AC09-9DF47A91A55A">
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 18:39:53 UTC</createdTime>
@@ -62,22 +101,19 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255 CHAR</dataTypeSize>
-<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="C8BC95A0-168F-09BF-6D34-71E49F8E48BC">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:06:37 UTC</createdTime>
-<generatorID>BA3F6233-C262-A0A6-5FE7-D0AD55A6ABDB</generatorID>
+<Attribute name="data_criacao" id="8FAD83C3-57CE-953F-F038-AD672283EF42">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:24:50 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
-<referedAttribute>0F5FA32F-673B-CB19-567F-4E7FD9D34CF1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -86,8 +122,9 @@
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 18:53:47 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

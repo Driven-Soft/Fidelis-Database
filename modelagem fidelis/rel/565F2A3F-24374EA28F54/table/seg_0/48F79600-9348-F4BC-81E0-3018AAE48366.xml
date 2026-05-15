@@ -74,6 +74,53 @@
 <colAssociation fkAssociation="2A0B4C14-2FAB-A00A-4AE5-2AF33CFA050E" referredColumn="7A9EA300-B01D-540F-C4EE-F0A98002251C"/>
 </associations>
 </Column>
+<Column name="nome" id="13283FE0-2C9E-0445-B2CA-711256FB63A8">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>3DBE65D2-5801-F90D-CB54-E11EDD648BBB</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75 CHAR</dataTypeSize>
+<ownDataTypeParameters>75 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="23F5EFC4-A06F-AEFD-244F-C18498418776">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>A6346956-1B4B-82C3-6EC5-9FD44ADE5F4B</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75 CHAR</dataTypeSize>
+<ownDataTypeParameters>75 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="5288B12B-3B52-7379-6E32-FE61262C0299">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>54200253-565E-0B02-4CA7-BF7EADE24B45</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_criacao" id="589FA729-DF40-42A8-411D-394F1DD21F04">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>79E187B8-B997-7D82-5205-CDC67A1C8581</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7249D18C-816C-B5C0-EA76-FF2C26CE939B" name="VETERINARIO_PK">

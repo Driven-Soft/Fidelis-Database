@@ -49,9 +49,8 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255 CHAR</dataTypeSize>
-<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="PET_id" id="5FC5414D-F995-3F74-5157-DB6E970EAF2F">
@@ -86,10 +85,22 @@
 <colAssociation fkAssociation="381D03BF-EEEC-CFF1-CE63-D2D3FE1C7D12" referredColumn="2C83F61B-672B-F0C2-7037-05C58786D692"/>
 </associations>
 </Column>
-<Column name="VETERINARIO_id" id="75FDFCAF-85C9-2B62-7E08-0D0D91F885E8">
+<Column name="vacina_aplicada" id="34E76752-E797-639B-1329-479B8C746117">
 <createdBy>shhit</createdBy>
-<createdTime>2026-05-15 13:47:25 UTC</createdTime>
-<generatorID>5B54DB99-7DD5-FB7B-880C-9765CF373389</generatorID>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>004F7C5A-81E2-3D90-01CA-67173F5A0940</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VETERINARIO_id2" id="A1882B78-FED9-4147-C4E5-1E8C39C20006">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>FABCF199-7DB6-9DDE-2D79-EBE3DA7A768C</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -99,7 +110,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A3BA0CBB-4488-DFBD-1FD7-2AEAF53282C5" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
+<colAssociation fkAssociation="95DE670A-2F54-098C-3A67-9F7BDA9210DF" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
 </associations>
 </Column>
 </columns>
@@ -138,15 +149,15 @@
 <colUsage columnID="F203D820-20AF-CA90-B951-443B9655DFAE"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="0224EEFF-C341-345E-8054-CF11B661D97A" name="VACINACAO_VETERINARIO_FK">
+<ind_PK_UK id="F6162522-B72B-C408-32DA-7E80253B9D6F" name="VACINACAO_VETERINARIO_FKv2">
 <createdBy>shhit</createdBy>
-<createdTime>2026-05-15 13:47:25 UTC</createdTime>
-<generatorID>2C6C0F14-90D3-3656-DCF2-7919DCF06E8E</generatorID>
+<createdTime>2026-05-15 14:37:27 UTC</createdTime>
+<generatorID>0FA76E14-D3CA-A941-6A6B-7274BFB56252</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="75FDFCAF-85C9-2B62-7E08-0D0D91F885E8"/>
+<colUsage columnID="A1882B78-FED9-4147-C4E5-1E8C39C20006"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
