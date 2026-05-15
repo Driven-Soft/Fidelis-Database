@@ -85,6 +85,19 @@
 <colAssociation fkAssociation="DFA436D1-A676-E2CB-F17B-328F0B082182" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
 </associations>
 </Column>
+<Column name="VETERINARIO_id2" id="14976E76-DC12-FE03-719C-58D5C6B92E57">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 14:42:33 UTC</createdTime>
+<generatorID>045165BE-7686-A280-E7CA-C56EABD409C3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7506E818-F9CE-760D-F3D4-EA8133AA146B" name="VERMIFUGACAO_PK">

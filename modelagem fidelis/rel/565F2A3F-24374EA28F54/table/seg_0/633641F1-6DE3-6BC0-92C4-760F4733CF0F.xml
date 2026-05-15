@@ -97,7 +97,7 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="VETERINARIO_id2" id="A1882B78-FED9-4147-C4E5-1E8C39C20006">
+<Column name="VETERINARIO_id" id="A1882B78-FED9-4147-C4E5-1E8C39C20006">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 14:37:27 UTC</createdTime>
 <generatorID>FABCF199-7DB6-9DDE-2D79-EBE3DA7A768C</generatorID>
@@ -149,7 +149,7 @@
 <colUsage columnID="F203D820-20AF-CA90-B951-443B9655DFAE"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F6162522-B72B-C408-32DA-7E80253B9D6F" name="VACINACAO_VETERINARIO_FKv2">
+<ind_PK_UK id="F6162522-B72B-C408-32DA-7E80253B9D6F" name="VACINACAO_VETERINARIO_FK">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 14:37:27 UTC</createdTime>
 <generatorID>0FA76E14-D3CA-A941-6A6B-7274BFB56252</generatorID>

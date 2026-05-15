@@ -133,7 +133,7 @@
 <colAssociation fkAssociation="D104FFB9-7794-D502-FFD5-6EFD715E74DE" referredColumn="7A9EA300-B01D-540F-C4EE-F0A98002251C"/>
 </associations>
 </Column>
-<Column name="status1" id="C23BE704-D6E3-F4B6-A1A7-6ECF227013B9">
+<Column name="status2" id="C23BE704-D6E3-F4B6-A1A7-6ECF227013B9">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 14:37:27 UTC</createdTime>
 <generatorID>B67628D0-45E1-5E06-E1D5-51E2483EA20D</generatorID>
