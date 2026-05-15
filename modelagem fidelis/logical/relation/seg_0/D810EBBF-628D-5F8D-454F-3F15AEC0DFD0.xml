@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PET_RECOMENDACAO" directorySegmentName="seg_0" id="D810EBBF-628D-5F8D-454F-3F15AEC0DFD0">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:46:26 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>0F5EC767-5348-C0A1-18CB-DA7B000BEA07</sourcePk>
+<targetPk>D69F6EAC-7BCB-9072-D9BD-A96EB81B2B6D</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33B192D7-569E-D98C-908A-DB13F39A733F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>52B25F74-6DB8-6252-FB08-A96F2191F3BB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

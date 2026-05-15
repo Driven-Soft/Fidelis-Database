@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2CC52A5B-B5F8-B0C3-E76E-1CD1C2EC7C9D" name="PRESCRICAO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>5F53487E-A99B-3AA4-826B-D11443D735AC</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6C3E13C3-C96A-2F61-F627-FEB81AA3D42F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>D5E4EE94-3AD6-6D3F-C8FF-8DF9CC74E6A3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dosagem" id="D2034CAE-D2FF-7CB0-DD20-614D42FCE4D8">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>59C2E801-AFFC-1C94-2C6A-EDE82A823BDD</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="frequencia" id="34CD424D-F9FD-3BB7-530B-A57388770BD1">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>A74A6A49-E2FE-ACDD-3496-5889F3B748CC</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="duracao_dias" id="468F8398-100D-924C-9498-BC08A619B139">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>11148C3F-FA29-A96F-DDB8-A879788EC469</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="observacao" id="4208A09F-953A-01E0-03A4-3283DC87AF8C">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>8127F74F-C69E-710A-520C-2A988AF2EAE3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONSULTA_id" id="1D1F9D66-A3B4-D842-DAD7-C311F66CE78B">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E37E21E6-71F9-A286-428D-A2CEFC68C7DD</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7EF35828-887E-019C-22E5-EB4436AAC481" referredColumn="C653E5BF-B726-3EDF-9BCD-C97A9F371090"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5ED08E55-8949-7E0A-8DA9-A4F1BCD73084" name="PRESCRICAO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>3DCCFBBC-443C-4737-E852-F2C0F4796D3D</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6C3E13C3-C96A-2F61-F627-FEB81AA3D42F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C686324-0F01-669B-6A52-495E0AFBC8D7" name="PRESCRICAO_CONSULTA_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>A89D7D46-7D02-9A55-7764-AE28F038DD86</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D1F9D66-A3B4-D842-DAD7-C311F66CE78B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

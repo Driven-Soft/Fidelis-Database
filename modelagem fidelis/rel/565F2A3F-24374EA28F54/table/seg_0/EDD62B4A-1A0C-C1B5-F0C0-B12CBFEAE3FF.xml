@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EDD62B4A-1A0C-C1B5-F0C0-B12CBFEAE3FF" name="COMPORTAMENTO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E0B2840A-02DF-0CD5-86A8-564FE70BD9CA</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C56E1B21-EC49-12D5-0287-B1A6F9F4C076">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>4DCAD047-825A-9CB0-6253-C26C983C5663</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="419F7EA6-1D8B-BC41-775F-E973C7DA3BAA">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>EF88EA6B-05B8-72EF-FBDD-1FF0CBD63259</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="1EE2B9B0-22E3-6492-6CE7-4E30EEE2E099">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>AB2B7BA3-3752-CFEA-709E-C03F1B6FAD69</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PET_id" id="F6B7DCF3-8FE5-18F5-B918-26950168223F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>8DC0128D-87EC-A701-D207-DCEEC20787A1</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A7BAA12-FE2A-1760-F019-9D0C25FDFCA4" referredColumn="D74D875C-C766-304C-C8C1-B940026DB8DE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD1A27AB-E9B4-47C7-80BB-02272252431D" name="COMPORTAMENTO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>79AD2F41-09FC-979A-8948-31A9D0C58C68</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C56E1B21-EC49-12D5-0287-B1A6F9F4C076"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DFA55DB-1D12-2D5B-72D3-32CE75AE1BC8" name="COMPORTAMENTO_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>9942A69F-0994-7403-1A77-AF8D43A63275</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6B7DCF3-8FE5-18F5-B918-26950168223F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

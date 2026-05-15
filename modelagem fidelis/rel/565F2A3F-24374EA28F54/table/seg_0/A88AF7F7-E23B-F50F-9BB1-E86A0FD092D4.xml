@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A88AF7F7-E23B-F50F-9BB1-E86A0FD092D4" name="VERMIFUGACAO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E3E0958F-6843-D71A-7DC2-1B827AA69D98</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="19B0EA99-BE03-6AF7-60FC-E5C593E1AF69">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>84057F9C-C9BF-DA09-92E9-E53FEE33D44B</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="produto" id="CA45372E-B287-633C-6175-24B09398D817">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>B2FAE78C-86E8-71E1-03A3-47092323D3C9</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_aplicacao" id="D8A2C027-E6C6-FA94-4E80-C33A3B74E0B2">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>9EA11470-05A6-8E1F-10BE-4ECB3875945E</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_proxima" id="6BD27F6E-00A8-8681-04F1-5708A8664DD1">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>9711E55F-5838-4D03-22BC-CD96272D1B52</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PET_id" id="2ED48181-CC95-436E-328D-D1A63B46A2A0">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>3B5B23EF-CE9C-9726-8A41-4346031DA178</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E00F13DC-664B-4B7B-BCE3-418E32B9DE37" referredColumn="D74D875C-C766-304C-C8C1-B940026DB8DE"/>
+</associations>
+</Column>
+<Column name="VETERINARIO_id" id="B6C36165-6CB1-7A10-A4FC-8F28FDF01958">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>8C68C8BE-DC1F-E9CB-18CF-9140CC6745D2</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DFA436D1-A676-E2CB-F17B-328F0B082182" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7506E818-F9CE-760D-F3D4-EA8133AA146B" name="VERMIFUGACAO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>9BCD65A2-6EB8-68AA-9B5B-7820136466F8</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19B0EA99-BE03-6AF7-60FC-E5C593E1AF69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08630CDA-20DD-494C-BB13-25D63C077854" name="VERMIFUGACAO_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>2D8399BB-3D8F-D965-9957-C72F134FE295</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2ED48181-CC95-436E-328D-D1A63B46A2A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B1DA833-CFBF-D9EC-2610-D3F67B80CD91" name="VERMIFUGACAO_VETERINARIO_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:26 UTC</createdTime>
+<generatorID>80F599FE-4881-FF3F-3416-8C4CCAFFBE04</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6C36165-6CB1-7A10-A4FC-8F28FDF01958"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DFA436D1-A676-E2CB-F17B-328F0B082182" containerWithKeyObject="A88AF7F7-E23B-F50F-9BB1-E86A0FD092D4" localFKIndex="9B1DA833-CFBF-D9EC-2610-D3F67B80CD91" name="VERMIFUGACAO_VETERINARIO_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:26 UTC</createdTime>
+<generatorID>80F599FE-4881-FF3F-3416-8C4CCAFFBE04</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<referredTableLongName>VETERINARIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>48F79600-9348-F4BC-81E0-3018AAE48366</referredTableID>
+<keyObject>7249D18C-816C-B5C0-EA76-FF2C26CE939B</keyObject>
+<referredKeyID>7249D18C-816C-B5C0-EA76-FF2C26CE939B</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

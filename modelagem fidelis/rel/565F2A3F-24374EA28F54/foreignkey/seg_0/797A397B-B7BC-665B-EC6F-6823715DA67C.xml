@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="797A397B-B7BC-665B-EC6F-6823715DA67C" containerWithKeyObject="C9E69FFF-BCB1-A6E2-E6D1-2C06C6711A97" localFKIndex="DD5364CE-3823-20D8-5E4D-85E37F99BA74" name="LEMBRETE_TUTOR_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>50887ED3-A7BB-419C-F4D9-82268AAABECC</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<referredTableLongName>TUTOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5B6D14B9-CAA7-2FB3-2DF4-D4A9C77A656B</referredTableID>
+<keyObject>1B40E36E-E713-AB25-50D1-3257159855E6</keyObject>
+<referredKeyID>1B40E36E-E713-AB25-50D1-3257159855E6</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

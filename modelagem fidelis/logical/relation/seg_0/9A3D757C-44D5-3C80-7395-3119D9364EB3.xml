@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PET_HISTORICO_PESO" directorySegmentName="seg_0" id="9A3D757C-44D5-3C80-7395-3119D9364EB3">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:42:54 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>0F5EC767-5348-C0A1-18CB-DA7B000BEA07</sourcePk>
+<targetPk>0A8D326A-1544-2617-7A8B-8AF4EA551F10</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>33B192D7-569E-D98C-908A-DB13F39A733F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>348EA51A-18B6-FEB2-3915-A797EAF0558A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

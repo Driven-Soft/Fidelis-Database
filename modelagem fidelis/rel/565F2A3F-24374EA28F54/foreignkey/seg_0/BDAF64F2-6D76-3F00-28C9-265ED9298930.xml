@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BDAF64F2-6D76-3F00-28C9-265ED9298930" containerWithKeyObject="CF3A3ED1-EA10-A4C4-64C1-FF442F6D95D7" localFKIndex="0FAAA460-8A05-12EA-C25C-04E2BEE6BAD4" name="MEDICAMENTO_PRESCRICAO_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>FC5990A4-A5EE-A446-6FF2-A15FD3E3AC2C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<referredTableLongName>PRESCRICAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2CC52A5B-B5F8-B0C3-E76E-1CD1C2EC7C9D</referredTableID>
+<keyObject>5ED08E55-8949-7E0A-8DA9-A4F1BCD73084</keyObject>
+<referredKeyID>5ED08E55-8949-7E0A-8DA9-A4F1BCD73084</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

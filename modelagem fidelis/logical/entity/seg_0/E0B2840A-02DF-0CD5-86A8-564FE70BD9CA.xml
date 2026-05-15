@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1EDCB0C3-6E2C-FDA7-14C3-9FAEF78D3ABE" name="TUTOR">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:37:38 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0B2840A-02DF-0CD5-86A8-564FE70BD9CA" name="COMPORTAMENTO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:12 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="54E2FE7C-C529-DC00-07E4-CD2CDE262F5B">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:37:47 UTC</createdTime>
+<Attribute name="id" id="4DCAD047-825A-9CB0-6253-C26C983C5663">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:19 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -27,35 +27,21 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="telefone" id="F21BAF15-FFC2-E27B-2084-B9BB8269B56F">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:38:10 UTC</createdTime>
+<Attribute name="data" id="EF88EA6B-05B8-72EF-FBDD-1FF0CBD63259">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:26 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cpf" id="9DB2C3DA-8FB7-C095-E32B-DD01CB368DFB">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:38:45 UTC</createdTime>
-<ownerDesignName>modelagem fidelis</ownerDesignName>
-<engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>14 CHAR</dataTypeSize>
-<ownDataTypeParameters>14 CHAR,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="endereco" id="40D6C1EB-D72B-9DFF-AC09-9DF47A91A55A">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:39:53 UTC</createdTime>
+<Attribute name="descricao" id="AB2B7BA3-3752-CFEA-709E-C03F1B6FAD69">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:31 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -66,15 +52,16 @@
 <dataTypeSize>255 CHAR</dataTypeSize>
 <ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id1" id="C8BC95A0-168F-09BF-6D34-71E49F8E48BC">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:06:37 UTC</createdTime>
-<generatorID>BA3F6233-C262-A0A6-5FE7-D0AD55A6ABDB</generatorID>
+<Attribute name="id1" id="8DC0128D-87EC-A701-D207-DCEEC20787A1">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:55 UTC</createdTime>
+<generatorID>9942A69F-0994-7403-1A77-AF8D43A63275</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
-<referedAttribute>0F5FA32F-673B-CB19-567F-4E7FD9D34CF1</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3AF93DBF-EB3D-BEE4-71E4-67736D64EE30</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -82,16 +69,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2A5237D6-5194-542F-FD5E-CD8E607C7399" name="TUTOR PK">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 18:53:47 UTC</createdTime>
+<identifier id="79AD2F41-09FC-979A-8948-31A9D0C58C68" name="COMPORTAMENTO PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:44:25 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>54E2FE7C-C529-DC00-07E4-CD2CDE262F5B</attributeRef>
+<attributeRef>4DCAD047-825A-9CB0-6253-C26C983C5663</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

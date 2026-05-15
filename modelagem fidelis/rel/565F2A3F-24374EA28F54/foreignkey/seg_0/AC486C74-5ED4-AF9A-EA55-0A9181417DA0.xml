@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AC486C74-5ED4-AF9A-EA55-0A9181417DA0" containerWithKeyObject="633641F1-6DE3-6BC0-92C4-760F4733CF0F" localFKIndex="5FCBE827-8490-CDD6-61F5-28821F2CF99F" name="VACINACAO_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E703B806-72A9-BFCA-6F70-7FF867EC8623</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<referredTableLongName>PET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E3D4084A-66CB-BC9B-A008-B63C1C4B644B</referredTableID>
+<keyObject>12EDAB66-916F-BC90-41D8-EC96B5F3B89D</keyObject>
+<referredKeyID>12EDAB66-916F-BC90-41D8-EC96B5F3B89D</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

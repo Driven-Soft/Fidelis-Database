@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="VETERINARIO_VACINACAO" directorySegmentName="seg_0" id="2C6C0F14-90D3-3656-DCF2-7919DCF06E8E">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:34:51 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>99F57A23-8AF9-D536-1CFB-6C9D86595006</sourcePk>
+<targetPk>C11F46EC-7040-4AC3-BC09-6D0FC1F70766</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DD6F50EA-04AF-2940-8FAD-FAF68041FD63</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C5093E8C-551D-01E4-A012-B071A4C51B2D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

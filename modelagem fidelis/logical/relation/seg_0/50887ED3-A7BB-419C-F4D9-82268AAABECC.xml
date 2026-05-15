@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TUTOR_LEMBRETE" directorySegmentName="seg_0" id="50887ED3-A7BB-419C-F4D9-82268AAABECC">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:40:04 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<sourcePk>2A5237D6-5194-542F-FD5E-CD8E607C7399</sourcePk>
+<targetPk>16CBF49A-34A1-54AD-25AC-7ED8FDC85E34</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1EDCB0C3-6E2C-FDA7-14C3-9FAEF78D3ABE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F00EB1D7-3907-C9FC-CE49-E71BA5A5B453</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="633641F1-6DE3-6BC0-92C4-760F4733CF0F" name="VACINACAO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>C5093E8C-551D-01E4-A012-B071A4C51B2D</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="41E6FB19-B21A-F45F-F659-9FD815E25DEE">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>A80EF8B8-5EA0-C1E5-E4C5-AAA39EDC12FE</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_aplicacao" id="A4B1956E-A906-0431-AE9C-E4D5A8FEDBE2">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E7E0C3CB-8301-B34C-83A2-77F10D4A6A94</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_proxima" id="08E11DFA-6EA4-FF69-5431-6FDC3016ED83">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>5F22F0E0-6415-F917-E9A6-4D45049229D3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="observacao" id="9E5CCE78-6AB0-45AD-FEB7-179F030A3189">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>A7452B00-0A17-078D-D39F-3D60145BF5F9</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PET_id" id="5FC5414D-F995-3F74-5157-DB6E970EAF2F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>FC32744E-DA34-76B1-B076-01B0A61E45B8</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC486C74-5ED4-AF9A-EA55-0A9181417DA0" referredColumn="D74D875C-C766-304C-C8C1-B940026DB8DE"/>
+</associations>
+</Column>
+<Column name="VACINA_id" id="F203D820-20AF-CA90-B951-443B9655DFAE">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>0ADC6FAA-C2C3-C759-408A-8F7E12C3711C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="381D03BF-EEEC-CFF1-CE63-D2D3FE1C7D12" referredColumn="2C83F61B-672B-F0C2-7037-05C58786D692"/>
+</associations>
+</Column>
+<Column name="VETERINARIO_id" id="75FDFCAF-85C9-2B62-7E08-0D0D91F885E8">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>5B54DB99-7DD5-FB7B-880C-9765CF373389</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3BA0CBB-4488-DFBD-1FD7-2AEAF53282C5" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD244E73-9220-C30B-0218-1104C79C13A5" name="VACINACAO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>C11F46EC-7040-4AC3-BC09-6D0FC1F70766</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41E6FB19-B21A-F45F-F659-9FD815E25DEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FCBE827-8490-CDD6-61F5-28821F2CF99F" name="VACINACAO_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>E703B806-72A9-BFCA-6F70-7FF867EC8623</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FC5414D-F995-3F74-5157-DB6E970EAF2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="533FCE80-16ED-3BDB-74EC-9B82F860C019" name="VACINACAO_VACINA_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>9B5BD9D9-9E85-DBBB-644F-BA038AC39AD8</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F203D820-20AF-CA90-B951-443B9655DFAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0224EEFF-C341-345E-8054-CF11B661D97A" name="VACINACAO_VETERINARIO_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:47:25 UTC</createdTime>
+<generatorID>2C6C0F14-90D3-3656-DCF2-7919DCF06E8E</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75FDFCAF-85C9-2B62-7E08-0D0D91F885E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

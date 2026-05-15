@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E3E0958F-6843-D71A-7DC2-1B827AA69D98" name="VERMIFUGACAO">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:34:10 UTC</createdTime>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="52B25F74-6DB8-6252-FB08-A96F2191F3BB" name="RECOMENDACAO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:12 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="84057F9C-C9BF-DA09-92E9-E53FEE33D44B">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:34:18 UTC</createdTime>
+<Attribute name="id" id="9F6E28FF-1E72-B1FA-C970-8102B66B28F5">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:18 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -27,9 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="produto" id="B2FAE78C-86E8-71E1-03A3-47092323D3C9">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:34:28 UTC</createdTime>
+<Attribute name="tipo" id="33FAFA43-7CE7-2682-29B9-CBE32A32D7D2">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:25 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -40,9 +40,22 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="data_aplicacao" id="9EA11470-05A6-8E1F-10BE-4ECB3875945E">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:36:27 UTC</createdTime>
+<Attribute name="descricao" id="0BC2722E-A965-5F7D-02FF-CF1E8386D862">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:37 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<engineerTo>
+<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_recomendacao" id="C7B88FE6-30DF-3337-3F7E-5535C31CAF5C">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:47 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -52,22 +65,10 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="data_proxima" id="9711E55F-5838-4D03-22BC-CD96272D1B52">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:36:37 UTC</createdTime>
-<ownerDesignName>modelagem fidelis</ownerDesignName>
-<engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id1" id="3B5B23EF-CE9C-9726-8A41-4346031DA178">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:37:39 UTC</createdTime>
-<generatorID>2D8399BB-3D8F-D965-9957-C72F134FE295</generatorID>
+<Attribute name="id1" id="20EA4A56-92F6-91B6-F2DE-770037DF7C80">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:46:26 UTC</createdTime>
+<generatorID>D810EBBF-628D-5F8D-454F-3F15AEC0DFD0</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
@@ -79,33 +80,18 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id2" id="8C68C8BE-DC1F-E9CB-18CF-9140CC6745D2">
-<createdBy>shhit</createdBy>
-<createdTime>2026-05-15 13:36:02 UTC</createdTime>
-<generatorID>80F599FE-4881-FF3F-3416-8C4CCAFFBE04</generatorID>
-<ownerDesignName>modelagem fidelis</ownerDesignName>
-<engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>106F8AD8-2E23-565E-1385-3CBD5EB534D8</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="9BCD65A2-6EB8-68AA-9B5B-7820136466F8" name="VERMIFUGACAO PK">
-<createdBy>Chiemi Hayashi</createdBy>
-<createdTime>2026-05-14 19:34:27 UTC</createdTime>
+<identifier id="D69F6EAC-7BCB-9072-D9BD-A96EB81B2B6D" name="RECOMENDACAO PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-15 13:45:24 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
 <item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>84057F9C-C9BF-DA09-92E9-E53FEE33D44B</attributeRef>
+<attributeRef>9F6E28FF-1E72-B1FA-C970-8102B66B28F5</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
