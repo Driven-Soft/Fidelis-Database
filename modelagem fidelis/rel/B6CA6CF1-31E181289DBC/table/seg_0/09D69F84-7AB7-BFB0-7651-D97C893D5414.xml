@@ -116,5 +116,16 @@
 <colUsage columnID="DD5BE040-BC63-3251-56F7-A9025C1EFD32"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="04555849-A43A-7171-1869-9D4569FCB5BB" name="FIDELIS_TUTOR__UN">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-19 18:28:41 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEB20EE0-BD28-D0B3-3EFD-D854D1E284FA"/>
+<colUsage columnID="E3A1E8B8-67EE-C855-5CE6-92E43A768B05"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

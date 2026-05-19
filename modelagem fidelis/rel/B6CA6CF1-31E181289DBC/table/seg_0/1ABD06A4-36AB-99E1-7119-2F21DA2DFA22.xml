@@ -120,7 +120,18 @@
 <colUsage columnID="EA6F9CF7-AADF-4BE9-EA5F-6A0D21EEB238"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E988A899-DB31-ED62-52CC-E09424C9B730" name="FIDELIS_VETERINARIO_FIDELIS_CLINICA_FK">
+<ind_PK_UK id="66FEB1D8-F7B2-497A-FB0C-C2FB7A4DD26B" name="FIDELIS_VETERINARIO__UN">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-19 18:29:02 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A27497DA-4BFB-3E58-0D45-929301C138FE"/>
+<colUsage columnID="F99442C7-AFB3-DAFF-A919-BA4AF11B1DEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E988A899-DB31-ED62-52CC-E09424C9B730" name="FIDELIS_VET_CLINICA_FK">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-18 19:54:58 UTC</createdTime>
 <generatorID>1AD38DD0-0466-8A83-2DA8-4E8361D4CDAD</generatorID>

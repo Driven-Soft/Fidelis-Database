@@ -148,7 +148,7 @@
 <colUsage columnID="1CAC6CE0-F89F-1558-22D5-732E43F55159"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D5297D99-93FF-4F69-96A8-CA23E3F69F7F" name="FIDELIS_PET_FIDELIS_CLINICA_FK">
+<ind_PK_UK id="D5297D99-93FF-4F69-96A8-CA23E3F69F7F" name="FIDELIS_PET_CLINICA_FK">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-18 19:54:58 UTC</createdTime>
 <generatorID>F6C66F76-396B-D816-4E28-5751A068FCB5</generatorID>
@@ -159,7 +159,7 @@
 <colUsage columnID="5B028E02-1949-29D9-5A5B-25BFDB37C550"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2FAF45BD-CAB4-03FC-A2C0-6770A4D977E8" name="FIDELIS_PET_FIDELIS_TUTOR_FK">
+<ind_PK_UK id="2FAF45BD-CAB4-03FC-A2C0-6770A4D977E8" name="FIDELIS_PET_TUTOR_FK">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-18 19:54:58 UTC</createdTime>
 <generatorID>C22F9EF5-8AFC-8761-3AC0-05180EE305EE</generatorID>
@@ -171,4 +171,18 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="FIDELIS_PET_CK_1" directorySegmentName="seg_0" id="F6F166BD-2075-5C2A-A6BA-906DD33FA626">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-19 18:44:06 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<rule><![CDATA[sexo IN ('M','F')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="FIDELIS_PET_CK_2" directorySegmentName="seg_0" id="DBFB8A3B-16E2-8447-FF64-3458FF80B34A">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-19 18:46:29 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<rule><![CDATA[status IN ('A','I')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
 </Table>

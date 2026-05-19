@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05B0545C-06A7-1254-9018-F7E1F185644A" containerWithKeyObject="78914704-79AF-8CE0-412F-A91BEF694669" localFKIndex="A2C24F02-5B75-3A03-E330-447E41C23FC4" name="FIDELIS_PRESCRICAO_FIDELIS_CONSULTA_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05B0545C-06A7-1254-9018-F7E1F185644A" containerWithKeyObject="78914704-79AF-8CE0-412F-A91BEF694669" localFKIndex="A2C24F02-5B75-3A03-E330-447E41C23FC4" name="FIDELIS_PRESCRICAO_CONSULTA_FK">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-18 19:54:58 UTC</createdTime>
 <generatorID>A89D7D46-7D02-9A55-7764-AE28F038DD86</generatorID>

@@ -93,5 +93,16 @@
 <colUsage columnID="55DB553E-C43F-E81F-7CD2-CBC1FF6363A9"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="BBC4391F-0A93-7A26-AD04-264734F0DC1B" name="FIDELIS_CLINICA__UN">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-19 18:28:13 UTC</createdTime>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13AD3BBC-AAC4-13DF-AABD-70EC25CF622B"/>
+<colUsage columnID="EC797550-AD00-2554-317F-1989DEE68E7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>
