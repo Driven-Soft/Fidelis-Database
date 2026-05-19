@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EF0A35D-F96D-4FDC-5600-886ABEEC173F" name="FIDELIS_LEMBRETE">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>F00EB1D7-3907-C9FC-CE49-E71BA5A5B453</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="875533A5-96FD-0F75-941A-2C5091DD6F0B">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>2663DEAB-05F5-C562-C925-8AFD0FDFDD34</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="B84BE13E-2F4E-EAF9-B50E-A7F18B4ED48B">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>2751B15C-3A25-7154-C6B2-E417E9BBA2B3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="B8BDBA17-9DEE-81A0-A17E-952C78DBAF4F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>8E800F4A-430E-608E-5291-3E2B69EC1445</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_prevista" id="32D82ECF-A2E9-AA8C-5507-4B5C3B7F6468">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>EDE781C3-F7A9-D29B-8131-15862DC961C9</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="E4225DD5-6C57-4151-4434-F89673B4DCA0">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>5328874E-47D1-ABF5-9A0C-B81870D813FA</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIDELIS_TUTOR_id" id="A872437D-D398-2A97-5FF0-B9CCBB884F9F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>2178B46C-BAEE-C677-9F61-91F850839BC8</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9745F487-8111-28E4-4F55-03ECE72DB021" referredColumn="BB7ACCB4-0204-A327-17F6-6F141AFE0EC3"/>
+</associations>
+</Column>
+<Column name="FIDELIS_PET_id" id="49BEF63E-D62A-2F18-EFB9-921537B81E41">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>F8EDC69B-B49E-6C3C-6ACD-D23AF11E9B76</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5D23CDF6-9C4B-8D5B-42DC-3161163B9375" referredColumn="B95C2DDD-FAB3-0810-EC67-98ECC0EA9EA6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F74DB4AE-9C1D-ABD2-A8FC-BB3DA356061C" name="FIDELIS_LEMBRETE_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>16CBF49A-34A1-54AD-25AC-7ED8FDC85E34</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="875533A5-96FD-0F75-941A-2C5091DD6F0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3825368C-5C9D-3BF2-D074-86D7FF9CAB04" name="FIDELIS_LEMBRETE_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>F2531F82-17F7-E5FB-3BE4-67A352922AA7</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49BEF63E-D62A-2F18-EFB9-921537B81E41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="458DE9D9-0712-823B-DF69-4E7D66657F84" name="FIDELIS_LEMBRETE_TUTOR_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>50887ED3-A7BB-419C-F4D9-82268AAABECC</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A872437D-D398-2A97-5FF0-B9CCBB884F9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="35D90B40-5053-4969-34EC-47FF4D4E21AD" name="FIDELIS_CLINICA">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>0D1EA5C5-BCEB-CC31-80E6-392081D89883</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CE988FD4-5E1E-3FCD-87ED-62CD15FF6C5A">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>4D60E270-77CB-F9DF-0DB8-FEFF9A8B3DDB</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="266650FF-2558-F472-6B36-BF7938E0F43F">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>10060AF3-81ED-5C89-65F8-1B19C5B8A212</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cnpj" id="FAE1809B-7C3D-D249-81F6-C13BA177C3C3">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>4369AD19-6DC7-6EDA-DBF2-FF63BA64CC59</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>18 CHAR</dataTypeSize>
+<ownDataTypeParameters>18 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefone" id="3B512D51-FDA5-1478-B601-99006A219671">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>3E5416B0-C4CF-FF8B-FD53-F9C0B0736876</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="D3D81566-94EB-4753-0057-690FF32273EA">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>CEFCA928-DF5B-47EC-C39C-07885F0DE047</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="6B0FD585-D4E7-5CDF-E29E-EE941328C973">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>3921FDCD-29AD-9039-8D84-778A655AB9EA</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E5B6DA95-387C-C8AA-1FB8-B2ABCD84102A" name="FIDELIS_CLINICA_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:33:54 UTC</createdTime>
+<generatorID>ED6D8B1D-03B2-238A-CF82-6465FB8BB412</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE988FD4-5E1E-3FCD-87ED-62CD15FF6C5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

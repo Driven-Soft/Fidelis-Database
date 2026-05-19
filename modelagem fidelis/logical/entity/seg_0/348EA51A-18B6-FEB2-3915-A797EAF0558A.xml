@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="348EA51A-18B6-FEB2-3915-A797EAF0558A" name="HISTORICO_PESO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="348EA51A-18B6-FEB2-3915-A797EAF0558A" name="FIDELIS_HISTORICO_PESO">
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 13:41:10 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2026-05-15 13:41:28 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2026-05-15 13:41:39 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -46,7 +46,7 @@
 <createdTime>2026-05-15 13:41:58 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -58,11 +58,11 @@
 <createdTime>2026-05-15 13:42:15 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT029</logicalDatatype>
+<logicalDatatype>LOGDT028</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id1" id="984F09F3-568F-5646-35CF-40EACABB1A26">
@@ -71,7 +71,7 @@
 <generatorID>9A3D757C-44D5-3C80-7395-3119D9364EB3</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>3AF93DBF-EB3D-BEE4-71E4-67736D64EE30</referedAttribute>
@@ -86,9 +86,8 @@
 <createdBy>shhit</createdBy>
 <createdTime>2026-05-15 13:41:38 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
+<item key="2865A76B-880F-D5B0-79D4-6A309A1EA921" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

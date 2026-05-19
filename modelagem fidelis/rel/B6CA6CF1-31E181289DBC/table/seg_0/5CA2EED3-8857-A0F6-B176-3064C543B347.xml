@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5CA2EED3-8857-A0F6-B176-3064C543B347" name="FIDELIS_RECOMENDACAO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>52B25F74-6DB8-6252-FB08-A96F2191F3BB</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="36BACE94-AE9B-44F2-3B73-94B0EF3186C0">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>9F6E28FF-1E72-B1FA-C970-8102B66B28F5</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="42578CA9-BA28-21A9-A13D-5F8702D5B5C7">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>33FAFA43-7CE7-2682-29B9-CBE32A32D7D2</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="6F494122-2081-F872-201D-98EFE44E4F0D">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>0BC2722E-A965-5F7D-02FF-CF1E8386D862</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_recomendacao" id="CE21C770-BFDA-BC48-647E-B511598AC342">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>C7B88FE6-30DF-3337-3F7E-5535C31CAF5C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIDELIS_PET_id" id="7AE798D3-55D5-188C-18A6-90C13C18C725">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>20EA4A56-92F6-91B6-F2DE-770037DF7C80</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17CD6BCB-37B6-8D4A-BE08-D17117C02283" referredColumn="1CAC6CE0-F89F-1558-22D5-732E43F55159"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3196942F-3AF6-9C19-9361-AF4AD277E417" name="FIDELIS_RECOMENDACAO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>D69F6EAC-7BCB-9072-D9BD-A96EB81B2B6D</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36BACE94-AE9B-44F2-3B73-94B0EF3186C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="655426A0-3248-F13F-9DBA-5C720E8AE5D2" name="FIDELIS_RECOMENDACAO_FIDELIS_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>D810EBBF-628D-5F8D-454F-3F15AEC0DFD0</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7AE798D3-55D5-188C-18A6-90C13C18C725"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

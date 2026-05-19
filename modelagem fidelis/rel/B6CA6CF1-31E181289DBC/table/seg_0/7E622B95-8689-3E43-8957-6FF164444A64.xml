@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E622B95-8689-3E43-8957-6FF164444A64" name="FIDELIS_MEDICAMENTO">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>A20683C9-35DF-CA92-DF12-49A7042E0C5B</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="2D862FAD-ED65-6D01-98FC-EDA634BC767C">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>1EA1BC52-BDD3-64E2-9F52-DB6073BA649C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="DCB91250-2597-6643-8603-1684D2D05D86">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>9AE75841-D09C-7E41-1AA3-4D2B381D251F</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="CB6A6AB2-C765-0CD2-A334-1E0A5A53C598">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>8B67D606-446D-908A-3B91-8E7E76BD46AF</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT028</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIDELIS_PRESCRICAO_id" id="122EC998-F669-298B-7C47-CBCAE36ECD2C">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>2FD7DAD4-F044-1FED-A0CC-43C860069C8C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92D0AD3D-A5B1-B3C5-7AC4-0910CF57EC47" referredColumn="1F464A26-9EFB-4186-CE1E-61512472BD74"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D6C9673-8211-699F-BA0B-558DE272CE94" name="FIDELIS_MEDICAMENTO_PK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>088F83A7-1623-FFA7-DE39-9E0159F5EB1D</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D862FAD-ED65-6D01-98FC-EDA634BC767C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA53B2C1-58A7-10C3-43E7-EA840289248B" name="FIDELIS_MEDICAMENTO_FIDELIS_PRESCRICAO_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:54:58 UTC</createdTime>
+<generatorID>FC5990A4-A5EE-A446-6FF2-A15FD3E3AC2C</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="122EC998-F669-298B-7C47-CBCAE36ECD2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

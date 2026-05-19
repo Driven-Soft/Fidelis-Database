@@ -98,6 +98,22 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="VETERINARIO_id3" id="95CEA318-819D-0DBF-D850-0EBB25157F88">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:29:55 UTC</createdTime>
+<generatorID>045165BE-7686-A280-E7CA-C56EABD409C3</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EEFC26D-46D4-81C4-1EAF-22D9D5F09BD1" referredColumn="70810A19-84BB-CCC9-E9B0-DB7CD1996EB4"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="7506E818-F9CE-760D-F3D4-EA8133AA146B" name="VERMIFUGACAO_PK">
@@ -132,6 +148,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B6C36165-6CB1-7A10-A4FC-8F28FDF01958"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D903A43D-E77C-D611-85F4-39F70C7F4D1F" name="VERMIFUGACAO_VETERINARIO_FKv2">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:29:55 UTC</createdTime>
+<generatorID>91CA2341-2692-267A-1BAB-06AD7555C29B</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95CEA318-819D-0DBF-D850-0EBB25157F88"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

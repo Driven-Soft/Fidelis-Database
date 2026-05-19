@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5D23CDF6-9C4B-8D5B-42DC-3161163B9375" containerWithKeyObject="2EF0A35D-F96D-4FDC-5600-886ABEEC173F" localFKIndex="3825368C-5C9D-3BF2-D074-86D7FF9CAB04" name="FIDELIS_LEMBRETE_PET_FK">
+<createdBy>shhit</createdBy>
+<createdTime>2026-05-18 19:42:35 UTC</createdTime>
+<generatorID>F2531F82-17F7-E5FB-3BE4-67A352922AA7</generatorID>
+<ownerDesignName>modelagem fidelis</ownerDesignName>
+<referredTableLongName>FIDELIS_PET</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3D4B4FD0-C9C0-2F16-FC22-51A54CE12112</referredTableID>
+<keyObject>35BA552A-A52B-85CB-5E2D-0D179B741A11</keyObject>
+<referredKeyID>35BA552A-A52B-85CB-5E2D-0D179B741A11</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

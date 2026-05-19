@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="33B192D7-569E-D98C-908A-DB13F39A733F" name="PET">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="33B192D7-569E-D98C-908A-DB13F39A733F" name="FIDELIS_PET">
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 18:45:37 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2026-05-14 18:45:47 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -32,7 +32,7 @@
 <createdTime>2026-05-14 18:45:57 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,7 +45,7 @@
 <createdTime>2026-05-14 18:46:11 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -58,7 +58,7 @@
 <createdTime>2026-05-14 18:46:25 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -71,7 +71,7 @@
 <createdTime>2026-05-14 18:46:39 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -84,7 +84,7 @@
 <createdTime>2026-05-14 18:46:53 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -96,7 +96,7 @@
 <createdTime>2026-05-15 14:35:07 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -109,12 +109,13 @@
 <createdTime>2026-05-14 18:47:05 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT029</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 CHAR</dataTypeSize>
+<ownDataTypeParameters>255 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id1" id="9400864F-0021-4336-D86B-DE6DF287ED10">
 <createdBy>Chiemi Hayashi</createdBy>
@@ -122,7 +123,7 @@
 <generatorID>C22F9EF5-8AFC-8761-3AC0-05180EE305EE</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>54E2FE7C-C529-DC00-07E4-CD2CDE262F5B</referedAttribute>
@@ -137,7 +138,7 @@
 <generatorID>F6C66F76-396B-D816-4E28-5751A068FCB5</generatorID>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="true"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <referedAttribute>4D60E270-77CB-F9DF-0DB8-FEFF9A8B3DDB</referedAttribute>
@@ -152,9 +153,8 @@
 <createdBy>Chiemi Hayashi</createdBy>
 <createdTime>2026-05-14 18:45:55 UTC</createdTime>
 <ownerDesignName>modelagem fidelis</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="565F2A3F-4FAE-9426-39CC-24374EA28F54" value="false"/>
+<item key="2EFE14B9-780E-C9E2-F66E-2C6A63C36728" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
