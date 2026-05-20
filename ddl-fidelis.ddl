@@ -3,23 +3,7 @@
 --   site:      Oracle Database 11g
 --   type:      Oracle Database 11g
 
--- DROP TABLES =================================================================
-
-DROP TABLE FIDELIS_COMPORTAMENTO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_EXAME CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_HISTORICO_PESO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_LEMBRETE CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_MEDICAMENTO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_PRESCRICAO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_RECOMENDACAO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_VACINACAO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_VERMIFUGACAO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_CONSULTA CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_PET CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_VETERINARIO CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_TUTOR CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_CLINICA CASCADE CONSTRAINTS;
-DROP TABLE FIDELIS_LOG_ERRO CASCADE CONSTRAINTS;
+SET SERVEROUTPUT ON;
 
 -- CRIAÇÃO DAS TABELAS =========================================================
 
@@ -514,8 +498,12 @@ CREATE OR REPLACE PROCEDURE SP_INSERIR_CONSULTA (
 )
 AS
     EX_TIPO_VAZIO EXCEPTION;
+    EX_DATA_HORA_VAZIA EXCEPTION;
 BEGIN
     IF p_tipo IS NULL THEN RAISE EX_TIPO_VAZIO;
+    END IF;
+
+    IF p_data_hora IS NULL THEN RAISE EX_DATA_HORA_VAZIA;
     END IF;
 
     INSERT INTO FIDELIS_CONSULTA (id,data_hora,tipo,diagnostico,observacoes,data_retorno,fidelis_veterinario_id,fidelis_pet_id)
@@ -527,6 +515,9 @@ BEGIN
 EXCEPTION
     WHEN EX_TIPO_VAZIO THEN
         SP_LOG_ERRO('SP_INSERIR_CONSULTA',SQLCODE,'TIPO DA CONSULTA NAO INFORMADO');
+
+    WHEN EX_DATA_HORA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_CONSULTA',SQLCODE,'DATA/HORA DA CONSULTA NAO INFORMADA');
 
     WHEN OTHERS THEN
         SP_LOG_ERRO('SP_INSERIR_CONSULTA',SQLCODE,SQLERRM);
@@ -936,6 +927,123 @@ END;
 
 -- CARGA DE DADOS ==============================================================
 
+BEGIN
+    -- Clinicas
+    SP_INSERIR_CLINICA(1,'Clinica Fidelis Centro','12345678000195','(11) 99999-0001','contato@fidelis.com','Rua das Flores, 123 - SP');
+    SP_INSERIR_CLINICA(2,'Clinica Fidelis Sul','98765432000166','(11) 98888-0002','sul@fidelis.com','Av. Brasil, 456 - Santo Andre');
+
+    -- Tutores
+    SP_INSERIR_TUTOR(1,'12345678901','Ana Souza','ana.souza@mail.com','senhaForte1','(11) 98111-1111','Rua A, 100 - SP');
+    SP_INSERIR_TUTOR(2,'10987654321','Bruno Lima','bruno.lima@mail.com','senhaForte2','(11) 98222-2222','Av. B, 200 - SP');
+
+    -- Veterinarios
+    SP_INSERIR_VETERINARIO(1,'CRMV1234','Dr. Carlos','carlos.vet@mail.com','vetSenha1','Cardiologia',1);
+    SP_INSERIR_VETERINARIO(2,'CRMV5678','Dra. Maria','maria.vet@mail.com','vetSenha2','Dermatologia',2);
+
+    -- Pets
+    SP_INSERIR_PET(1,'Luna','Canina','Vira-lata','F',TO_DATE('2021-04-10','YYYY-MM-DD'),'A','https://img.com/luna.jpg',1,1);
+    SP_INSERIR_PET(2,'Milo','Felina','Siamês','M',TO_DATE('2022-08-20','YYYY-MM-DD'),'A','https://img.com/milo.jpg',2,2);
+
+    -- Consultas
+    SP_INSERIR_CONSULTA(1,TO_DATE('2026-05-20 09:00','YYYY-MM-DD HH24:MI'),'Rotina','Sem alteracoes','Proxima revisao em 6 meses',TO_DATE('2026-11-20','YYYY-MM-DD'),1,1);
+    SP_INSERIR_CONSULTA(2,TO_DATE('2026-05-22 14:30','YYYY-MM-DD HH24:MI'),'Emergencia','Alergia na pele','Retorno em 15 dias',TO_DATE('2026-06-06','YYYY-MM-DD'),2,2);
+
+    -- Prescricoes
+    SP_INSERIR_PRESCRICAO(1,'10mg','Duas vezes ao dia',7,'Tomar apos refeicoes',1);
+    SP_INSERIR_PRESCRICAO(2,'5mg','Uma vez ao dia',10,'Apenas se necessario',2);
+
+    -- Exames
+    SP_INSERIR_EXAME(1,'Sangue','Hemograma completo','Normal',TO_DATE('2026-05-20','YYYY-MM-DD'),1);
+    SP_INSERIR_EXAME(2,'Urina','Urinálise','Alterado',TO_DATE('2026-05-22','YYYY-MM-DD'),2);
+
+    -- Medicamentos
+    SP_INSERIR_MEDICAMENTO(1,'Cefalexina','Antibiotico oral',1);
+    SP_INSERIR_MEDICAMENTO(2,'Alergex','Antialergico oral',2);
+
+    -- Comportamentos
+    SP_INSERIR_COMPORTAMENTO(1,TO_DATE('2026-05-18','YYYY-MM-DD'),'Excesso de lambedura nas patas',1);
+    SP_INSERIR_COMPORTAMENTO(2,TO_DATE('2026-05-19','YYYY-MM-DD'),'Miau alto durante a noite',2);
+
+    -- Historico de peso
+    SP_INSERIR_HISTORICO_PESO(1,12.5,TO_DATE('2026-05-18','YYYY-MM-DD'),'Peso estavel',1);
+    SP_INSERIR_HISTORICO_PESO(2,4.2,TO_DATE('2026-05-19','YYYY-MM-DD'),'Leve ganho de peso',2);
+    SP_INSERIR_HISTORICO_PESO(3,13.0,TO_DATE('2026-05-20','YYYY-MM-DD'),'Manutencao de peso',1);
+    SP_INSERIR_HISTORICO_PESO(4,12.8,TO_DATE('2026-05-21','YYYY-MM-DD'),'Peso estavel',1);
+    SP_INSERIR_HISTORICO_PESO(5,4.3,TO_DATE('2026-05-22','YYYY-MM-DD'),'Leve diminuicao',2);
+
+    -- Lembretes
+    SP_INSERIR_LEMBRETE(1,'Vacina','Tomar vacinas anuais',TO_DATE('2026-06-01','YYYY-MM-DD'),'P',1,1);
+    SP_INSERIR_LEMBRETE(2,'Banho','Agendar banho estetico',TO_DATE('2026-06-05','YYYY-MM-DD'),'P',2,2);
+
+    -- Recomendacoes
+    SP_INSERIR_RECOMENDACAO(1,'Alimentacao','Trocar racao para dietetica',TO_DATE('2026-05-20','YYYY-MM-DD'),1);
+    SP_INSERIR_RECOMENDACAO(2,'Higiene','Escovar os dentes diariamente',TO_DATE('2026-05-22','YYYY-MM-DD'),2);
+
+    -- Vacinacoes
+    SP_INSERIR_VACINACAO(1,TO_DATE('2026-05-20','YYYY-MM-DD'),TO_DATE('2027-05-20','YYYY-MM-DD'),'Raiva','Dose anual aplicada',1,1);
+    SP_INSERIR_VACINACAO(2,TO_DATE('2026-05-22','YYYY-MM-DD'),TO_DATE('2027-05-22','YYYY-MM-DD'),'Cinomose','Aplicada sem reacao',2,2);
+
+    -- Vermifugacoes
+    SP_INSERIR_VERMIFUGACAO(1,'Drontal',TO_DATE('2026-05-21','YYYY-MM-DD'),TO_DATE('2026-11-21','YYYY-MM-DD'),1,1);
+    SP_INSERIR_VERMIFUGACAO(2,'Milbemax',TO_DATE('2026-05-23','YYYY-MM-DD'),TO_DATE('2026-11-23','YYYY-MM-DD'),2,2);
+
+    COMMIT;
+END;
+/
+
 -- CONSULTAS ===================================================================
 
--- RELATÓRIOS ==================================================================
+-- Consulta 1: pets por tutor e clinica
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('CONSULTA 1 - PETS POR TUTOR E CLINICA');
+
+    FOR rec IN (
+        SELECT t.nome AS tutor,
+               c.nome AS clinica,
+               COUNT(p.id) AS total_pets
+        FROM FIDELIS_PET p
+        JOIN FIDELIS_TUTOR t ON p.FIDELIS_TUTOR_id = t.id
+        JOIN FIDELIS_CLINICA c ON p.FIDELIS_CLINICA_id = c.id
+        GROUP BY t.nome, c.nome
+        ORDER BY COUNT(p.id) DESC, t.nome
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE(rec.tutor || ' | ' || rec.clinica || ' | ' || rec.total_pets);
+    END LOOP;
+END;
+/
+
+-- Consulta 2: consultas por veterinario e tipo
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('CONSULTA 2 - CONSULTAS POR VETERINARIO E TIPO');
+
+    FOR rec IN (
+        SELECT v.nome AS veterinario,
+               f.tipo,
+               COUNT(*) AS total_consultas
+        FROM FIDELIS_CONSULTA f
+        JOIN FIDELIS_VETERINARIO v ON f.FIDELIS_VETERINARIO_id = v.id
+        JOIN FIDELIS_PET p ON f.FIDELIS_PET_id = p.id
+        GROUP BY v.nome, f.tipo
+        ORDER BY COUNT(*) DESC, v.nome
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE(rec.veterinario || ' | ' || rec.tipo || ' | ' || rec.total_consultas);
+    END LOOP;
+END;
+/
+
+-- Consulta 3: historico de peso com linha anterior e proxima
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('CONSULTA 3 - HISTORICO DE PESO COM LINHA ANTERIOR E PROXIMA');
+
+    FOR rec IN (
+        SELECT id,
+               peso_kg,
+               NVL(TO_CHAR(LAG(peso_kg) OVER (ORDER BY data_medicao), '990.00'), 'Vazio') AS peso_anterior,
+               NVL(TO_CHAR(LEAD(peso_kg) OVER (ORDER BY data_medicao), '990.00'), 'Vazio') AS peso_proximo
+        FROM FIDELIS_HISTORICO_PESO
+        ORDER BY data_medicao
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('ID=' || rec.id || ' | PESO=' || rec.peso_kg || ' | ANTERIOR=' || rec.peso_anterior || ' | PROXIMO=' || rec.peso_proximo);
+    END LOOP;
+END;
+/
