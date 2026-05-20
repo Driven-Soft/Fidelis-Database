@@ -1047,3 +1047,111 @@ BEGIN
     END LOOP;
 END;
 /
+
+-- RELATÓRIOS ===================================================================
+
+-- Relatorio 1: pets e status
+DECLARE
+    CURSOR c_pets IS
+        SELECT id, nome, especie, status
+        FROM FIDELIS_PET
+        ORDER BY nome;
+    v_pet c_pets%ROWTYPE;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('RELATORIO 1 - PETS E STATUS');
+    OPEN c_pets;
+    LOOP
+        FETCH c_pets INTO v_pet;
+        EXIT WHEN c_pets%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('PET=' || v_pet.id || ' | ' || v_pet.nome || ' | ' || v_pet.especie || ' | STATUS=' || v_pet.status);
+    END LOOP;
+    CLOSE c_pets;
+END;
+/
+
+-- Relatorio 2: consultas e decisao por tipo
+DECLARE
+    CURSOR c_consultas IS
+        SELECT id, tipo, data_hora, fidelis_veterinario_id, fidelis_pet_id
+        FROM FIDELIS_CONSULTA
+        ORDER BY data_hora;
+    v_consulta c_consultas%ROWTYPE;
+    v_nivel VARCHAR2(20);
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('RELATORIO 2 - CONSULTAS E CLASSIFICACAO');
+    OPEN c_consultas;
+    LOOP
+        FETCH c_consultas INTO v_consulta;
+        EXIT WHEN c_consultas%NOTFOUND;
+        IF v_consulta.tipo = 'Emergencia' THEN
+            v_nivel := 'Urgente';
+        ELSE
+            v_nivel := 'Rotina';
+        END IF;
+        DBMS_OUTPUT.PUT_LINE('CONSULTA=' || v_consulta.id || ' | TIPO=' || v_consulta.tipo || ' | NIVEL=' || v_nivel);
+    END LOOP;
+    CLOSE c_consultas;
+END;
+/
+
+-- Relatorio 3: historico de peso com resumo numerico e agrupado por pet
+DECLARE
+    CURSOR c_peso IS
+        SELECT FIDELIS_PET_id, data_medicao, peso_kg
+        FROM FIDELIS_HISTORICO_PESO
+        ORDER BY FIDELIS_PET_id, data_medicao;
+    v_peso c_peso%ROWTYPE;
+    v_total_pesos INTEGER;
+    v_media_peso  NUMBER(7,2);
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('RELATORIO 3 - HISTORICO DE PESO');
+
+    OPEN c_peso;
+    LOOP
+        FETCH c_peso INTO v_peso;
+        EXIT WHEN c_peso%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('PET_ID=' || v_peso.FIDELIS_PET_id || ' | DATA=' || TO_CHAR(v_peso.data_medicao,'YYYY-MM-DD') || ' | PESO=' || v_peso.peso_kg);
+    END LOOP;
+    CLOSE c_peso;
+
+    SELECT COUNT(*), AVG(peso_kg)
+      INTO v_total_pesos, v_media_peso
+      FROM FIDELIS_HISTORICO_PESO;
+
+    DBMS_OUTPUT.PUT_LINE('TOTAL DE REGISTROS=' || v_total_pesos || ' | PESO MEDIO=' || v_media_peso);
+
+    FOR rec IN (
+        SELECT FIDELIS_PET_id, COUNT(*) AS total_registros, AVG(peso_kg) AS peso_medio
+        FROM FIDELIS_HISTORICO_PESO
+        GROUP BY FIDELIS_PET_id
+        ORDER BY FIDELIS_PET_id
+    ) LOOP
+        DBMS_OUTPUT.PUT_LINE('PET_ID=' || rec.FIDELIS_PET_id || ' | QTDE=' || rec.total_registros || ' | PESO_MEDIO=' || rec.peso_medio);
+    END LOOP;
+END;
+/
+
+-- Relatorio 4: lembretes e decisao de status
+DECLARE
+    CURSOR c_lembretes IS
+        SELECT id, tipo, status, data_prevista
+        FROM FIDELIS_LEMBRETE
+        ORDER BY data_prevista;
+    v_lembrete c_lembretes%ROWTYPE;
+    v_status_desc VARCHAR2(20);
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('RELATORIO 4 - LEMBRETES');
+    OPEN c_lembretes;
+    LOOP
+        FETCH c_lembretes INTO v_lembrete;
+        EXIT WHEN c_lembretes%NOTFOUND;
+        IF v_lembrete.status = 'P' THEN
+            v_status_desc := 'Pendente';
+        ELSE
+            v_status_desc := 'Concluido';
+        END IF;
+        DBMS_OUTPUT.PUT_LINE('LEMBRETE=' || v_lembrete.id || ' | TIPO=' || v_lembrete.tipo || ' | DATA=' || TO_CHAR(v_lembrete.data_prevista,'YYYY-MM-DD') || ' | STATUS=' || v_status_desc);
+    END LOOP;
+    CLOSE c_lembretes;
+END;
+/
