@@ -3,6 +3,24 @@
 --   site:      Oracle Database 11g
 --   type:      Oracle Database 11g
 
+-- DROP TABLES =================================================================
+
+DROP TABLE FIDELIS_COMPORTAMENTO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_EXAME CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_HISTORICO_PESO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_LEMBRETE CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_MEDICAMENTO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_PRESCRICAO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_RECOMENDACAO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_VACINACAO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_VERMIFUGACAO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_CONSULTA CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_PET CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_VETERINARIO CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_TUTOR CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_CLINICA CASCADE CONSTRAINTS;
+DROP TABLE FIDELIS_LOG_ERRO CASCADE CONSTRAINTS;
+
 -- CRIAÇÃO DAS TABELAS =========================================================
 
 CREATE TABLE FIDELIS_CLINICA ( 
@@ -293,10 +311,7 @@ ALTER TABLE FIDELIS_LOG_ERRO
 
 -- PROCEDURES ==================================================================
 
--- =========================================
--- PROCEDURE DE LOG DE ERROS
--- =========================================
-
+-- procedure log de erros
 CREATE OR REPLACE PROCEDURE SP_LOG_ERRO (
     p_nome_procedure IN VARCHAR2,
     p_codigo_erro    IN NUMBER,
@@ -304,25 +319,618 @@ CREATE OR REPLACE PROCEDURE SP_LOG_ERRO (
 )
 AS
 BEGIN
-    INSERT INTO FIDELIS_LOG_ERRO (
-        nome_procedure,
-        usuario_bd,
-        data_ocorrencia,
-        codigo_erro,
-        mensagem_erro
-    )
-    VALUES (
-        p_nome_procedure,
-        USER,
-        SYSDATE,
-        p_codigo_erro,
-        p_mensagem_erro
-    );
+    INSERT INTO FIDELIS_LOG_ERRO (nome_procedure,usuario_bd,data_ocorrencia,codigo_erro,mensagem_erro)
+    VALUES (p_nome_procedure,USER,SYSDATE,p_codigo_erro,p_mensagem_erro);
 EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE(
             'ERRO AO GRAVAR LOG: ' || SQLERRM
         );
+END;
+/
+
+-- procedure clinica
+CREATE OR REPLACE PROCEDURE SP_INSERIR_CLINICA (
+    p_id         IN INTEGER,
+    p_nome       IN VARCHAR2,
+    p_cnpj       IN VARCHAR2,
+    p_telefone   IN VARCHAR2,
+    p_email      IN VARCHAR2,
+    p_endereco   IN VARCHAR2
+)
+AS
+    EX_CNPJ_INVALIDO EXCEPTION;
+    EX_NOME_VAZIO EXCEPTION;
+BEGIN
+    IF p_nome IS NULL THEN RAISE EX_NOME_VAZIO;
+    END IF;
+
+    IF LENGTH(p_cnpj) < 14 THEN RAISE EX_CNPJ_INVALIDO;
+    END IF;
+
+    INSERT INTO FIDELIS_CLINICA (id,nome,cnpj,telefone,email,endereco)
+    VALUES (p_id,p_nome,p_cnpj,p_telefone,p_email,p_endereco);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'CLINICA INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_CLINICA',SQLCODE,'CNPJ OU EMAIL DUPLICADO');
+
+    WHEN EX_CNPJ_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_CLINICA',SQLCODE,'CNPJ INVALIDO');
+
+    WHEN EX_NOME_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_CLINICA',SQLCODE,'NOME NAO INFORMADO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_CLINICA',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure tutor
+CREATE OR REPLACE PROCEDURE SP_INSERIR_TUTOR (
+    p_id        IN INTEGER,
+    p_cpf       IN VARCHAR2,
+    p_nome      IN VARCHAR2,
+    p_email     IN VARCHAR2,
+    p_senha     IN VARCHAR2,
+    p_telefone  IN VARCHAR2,
+    p_endereco  IN VARCHAR2
+)
+AS
+    EX_CPF_INVALIDO EXCEPTION;
+    EX_NOME_VAZIO EXCEPTION;
+BEGIN
+    IF p_nome IS NULL THEN RAISE EX_NOME_VAZIO;
+    END IF;
+
+    IF LENGTH(p_cpf) < 11 THEN RAISE EX_CPF_INVALIDO;
+    END IF;
+
+    INSERT INTO FIDELIS_TUTOR (id,cpf,nome,email,senha,telefone,endereco,data_criacao)
+    VALUES (p_id,p_cpf,p_nome,p_email,p_senha,p_telefone,p_endereco,SYSDATE);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'TUTOR INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_TUTOR',SQLCODE,'CPF OU EMAIL DUPLICADO');
+
+    WHEN EX_CPF_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_TUTOR',SQLCODE,'CPF INVALIDO');
+
+    WHEN EX_NOME_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_TUTOR',SQLCODE,'NOME NAO INFORMADO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_TUTOR',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure veterinario
+CREATE OR REPLACE PROCEDURE SP_INSERIR_VETERINARIO (
+    p_id                  IN INTEGER,
+    p_crmv                IN VARCHAR2,
+    p_nome                IN VARCHAR2,
+    p_email               IN VARCHAR2,
+    p_senha               IN VARCHAR2,
+    p_especialidade       IN VARCHAR2,
+    p_fidelis_clinica_id  IN INTEGER
+)
+AS
+    EX_CRMV_INVALIDO EXCEPTION;
+    EX_NOME_VAZIO EXCEPTION;
+BEGIN
+    IF p_nome IS NULL THEN RAISE EX_NOME_VAZIO;
+    END IF;
+
+    IF LENGTH(p_crmv) < 4 THEN RAISE EX_CRMV_INVALIDO;
+    END IF;
+
+    INSERT INTO FIDELIS_VETERINARIO (id,crmv,nome,email,senha,especialidade,data_criacao,fidelis_clinica_id)
+    VALUES (p_id,p_crmv,p_nome,p_email,p_senha,p_especialidade,SYSDATE,p_fidelis_clinica_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'VETERINARIO INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_VETERINARIO',SQLCODE,'CRMV OU EMAIL DUPLICADO');
+
+    WHEN EX_CRMV_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_VETERINARIO',SQLCODE,'CRMV INVALIDO');
+
+    WHEN EX_NOME_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_VETERINARIO',SQLCODE,'NOME NAO INFORMADO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_VETERINARIO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure pet
+CREATE OR REPLACE PROCEDURE SP_INSERIR_PET (
+    p_id                   IN INTEGER,
+    p_nome                 IN VARCHAR2,
+    p_especie              IN VARCHAR2,
+    p_raca                 IN VARCHAR2,
+    p_sexo                 IN CHAR,
+    p_data_nascimento      IN DATE,
+    p_status               IN CHAR,
+    p_foto_url             IN VARCHAR2,
+    p_fidelis_tutor_id     IN INTEGER,
+    p_fidelis_clinica_id   IN INTEGER
+)
+AS
+    EX_NOME_VAZIO EXCEPTION;
+    EX_SEXO_INVALIDO EXCEPTION;
+    EX_STATUS_INVALIDO EXCEPTION;
+BEGIN
+    IF p_nome IS NULL THEN RAISE EX_NOME_VAZIO;
+    END IF;
+
+    IF p_sexo NOT IN ('M','F') THEN
+        RAISE EX_SEXO_INVALIDO;
+    END IF;
+
+    IF p_status NOT IN ('A','I') THEN
+        RAISE EX_STATUS_INVALIDO;
+    END IF;
+
+    INSERT INTO FIDELIS_PET (id,nome,especie,raca,sexo,data_nascimento,status,foto_url,fidelis_tutor_id,fidelis_clinica_id)
+    VALUES (p_id,p_nome,p_especie,p_raca,p_sexo,p_data_nascimento,p_status,p_foto_url,p_fidelis_tutor_id,p_fidelis_clinica_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'PET INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN EX_NOME_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_PET',SQLCODE,'NOME NAO INFORMADO');
+
+    WHEN EX_SEXO_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_PET',SQLCODE,'SEXO INVALIDO');
+
+    WHEN EX_STATUS_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_PET',SQLCODE,'STATUS INVALIDO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_PET',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure consulta
+CREATE OR REPLACE PROCEDURE SP_INSERIR_CONSULTA (
+    p_id                       IN INTEGER,
+    p_data_hora               IN DATE,
+    p_tipo                    IN VARCHAR2,
+    p_diagnostico             IN CLOB,
+    p_observacoes             IN CLOB,
+    p_data_retorno            IN DATE,
+    p_fidelis_veterinario_id  IN INTEGER,
+    p_fidelis_pet_id          IN INTEGER
+)
+AS
+    EX_TIPO_VAZIO EXCEPTION;
+BEGIN
+    IF p_tipo IS NULL THEN RAISE EX_TIPO_VAZIO;
+    END IF;
+
+    INSERT INTO FIDELIS_CONSULTA (id,data_hora,tipo,diagnostico,observacoes,data_retorno,fidelis_veterinario_id,fidelis_pet_id)
+    VALUES (p_id,p_data_hora,p_tipo,p_diagnostico,p_observacoes,p_data_retorno,p_fidelis_veterinario_id,p_fidelis_pet_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'CONSULTA INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN EX_TIPO_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_CONSULTA',SQLCODE,'TIPO DA CONSULTA NAO INFORMADO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_CONSULTA',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure prescricao
+CREATE OR REPLACE PROCEDURE SP_INSERIR_PRESCRICAO (
+    p_id                    IN INTEGER,
+    p_dosagem               IN VARCHAR2,
+    p_frequencia            IN VARCHAR2,
+    p_duracao_dias          IN INTEGER,
+    p_observacao            IN CLOB,
+    p_fidelis_consulta_id   IN INTEGER
+)
+AS
+    EX_DOSAGEM_VAZIA EXCEPTION;
+    EX_FREQUENCIA_VAZIA EXCEPTION;
+    EX_DURACAO_INVALIDA EXCEPTION;
+BEGIN
+    IF p_dosagem IS NULL THEN RAISE EX_DOSAGEM_VAZIA;
+    END IF;
+
+    IF p_frequencia IS NULL THEN RAISE EX_FREQUENCIA_VAZIA;
+    END IF;
+
+    IF p_duracao_dias <= 0 THEN
+        RAISE EX_DURACAO_INVALIDA;
+    END IF;
+
+    INSERT INTO FIDELIS_PRESCRICAO (id,dosagem,frequencia,duracao_dias,observacao,fidelis_consulta_id)
+    VALUES (p_id,p_dosagem,p_frequencia,p_duracao_dias,p_observacao,p_fidelis_consulta_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'PRESCRICAO INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN EX_DOSAGEM_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_PRESCRICAO',SQLCODE,'DOSAGEM NAO INFORMADA');
+
+    WHEN EX_FREQUENCIA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_PRESCRICAO',SQLCODE,'FREQUENCIA NAO INFORMADA');
+
+    WHEN EX_DURACAO_INVALIDA THEN
+        SP_LOG_ERRO('SP_INSERIR_PRESCRICAO',SQLCODE,'DURACAO INVALIDA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_PRESCRICAO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure exame
+CREATE OR REPLACE PROCEDURE SP_INSERIR_EXAME (
+    p_id                     IN INTEGER,
+    p_tipo                   IN VARCHAR2,
+    p_descricao              IN CLOB,
+    p_resultado              IN CLOB,
+    p_data                   IN DATE,
+    p_fidelis_consulta_id    IN INTEGER
+)
+AS
+    EX_TIPO_VAZIO EXCEPTION;
+    EX_DESCRICAO_VAZIA EXCEPTION;
+BEGIN
+    IF p_tipo IS NULL THEN RAISE EX_TIPO_VAZIO;
+    END IF;
+
+    IF p_descricao IS NULL THEN RAISE EX_DESCRICAO_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_EXAME (id,tipo,descricao,resultado,data,FIDELIS_CONSULTA_id)
+    VALUES (p_id,p_tipo,p_descricao,p_resultado,p_data,p_fidelis_consulta_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'EXAME INSERIDO COM SUCESSO'
+    );
+
+EXCEPTION
+    WHEN EX_TIPO_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_EXAME',SQLCODE,'TIPO NAO INFORMADO');
+
+    WHEN EX_DESCRICAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_EXAME',SQLCODE,'DESCRICAO NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_EXAME',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure medicamento
+CREATE OR REPLACE PROCEDURE SP_INSERIR_MEDICAMENTO (
+    p_id                        IN INTEGER,
+    p_nome                      IN VARCHAR2,
+    p_descricao                 IN CLOB,
+    p_fidelis_prescricao_id     IN INTEGER
+)
+AS
+    EX_NOME_VAZIO EXCEPTION;
+    EX_DESCRICAO_VAZIA EXCEPTION;
+BEGIN
+    IF p_nome IS NULL THEN RAISE EX_NOME_VAZIO;
+    END IF;
+
+    IF p_descricao IS NULL THEN RAISE EX_DESCRICAO_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_MEDICAMENTO (id,nome,descricao,FIDELIS_PRESCRICAO_id)
+    VALUES (p_id,p_nome,p_descricao,p_fidelis_prescricao_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'MEDICAMENTO INSERIDO COM SUCESSO'
+    );
+
+EXCEPTION
+    WHEN EX_NOME_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_MEDICAMENTO',SQLCODE,'NOME NAO INFORMADO');
+
+    WHEN EX_DESCRICAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_MEDICAMENTO',SQLCODE,'DESCRICAO NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_MEDICAMENTO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure comportamento
+CREATE OR REPLACE PROCEDURE SP_INSERIR_COMPORTAMENTO (
+    p_id              IN INTEGER,
+    p_data            IN DATE,
+    p_descricao       IN CLOB,
+    p_fidelis_pet_id  IN INTEGER
+)
+AS
+    EX_DATA_VAZIA       EXCEPTION;
+    EX_DESCRICAO_VAZIA  EXCEPTION;
+BEGIN
+    IF p_data IS NULL THEN RAISE EX_DATA_VAZIA;
+    END IF;
+
+    IF p_descricao IS NULL THEN RAISE EX_DESCRICAO_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_COMPORTAMENTO (id,data,descricao,FIDELIS_PET_id)
+    VALUES (p_id,p_data,p_descricao,p_fidelis_pet_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'COMPORTAMENTO INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_COMPORTAMENTO',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_DATA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_COMPORTAMENTO',SQLCODE,'DATA NAO INFORMADA');
+
+    WHEN EX_DESCRICAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_COMPORTAMENTO',SQLCODE,'DESCRICAO NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_COMPORTAMENTO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure historico de peso
+CREATE OR REPLACE PROCEDURE SP_INSERIR_HISTORICO_PESO (
+    p_id             IN INTEGER,
+    p_peso_kg        IN NUMBER,
+    p_data_medicao   IN DATE,
+    p_observacao     IN CLOB,
+    p_fidelis_pet_id IN INTEGER
+)
+AS
+    EX_PESO_INVALIDO      EXCEPTION;
+    EX_DATA_VAZIA         EXCEPTION;
+    EX_OBSERVACAO_VAZIA   EXCEPTION;
+BEGIN
+    IF p_peso_kg <= 0 THEN
+        RAISE EX_PESO_INVALIDO;
+    END IF;
+
+    IF p_data_medicao IS NULL THEN RAISE EX_DATA_VAZIA;
+    END IF;
+
+    IF p_observacao IS NULL THEN RAISE EX_OBSERVACAO_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_HISTORICO_PESO (id,peso_kg,data_medicao,observacao,FIDELIS_PET_id)
+    VALUES (p_id,p_peso_kg,p_data_medicao,p_observacao,p_fidelis_pet_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'HISTORICO DE PESO INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_HISTORICO_PESO',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_PESO_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_HISTORICO_PESO',SQLCODE,'PESO INVALIDO');
+
+    WHEN EX_DATA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_HISTORICO_PESO',SQLCODE,'DATA DE MEDICAO NAO INFORMADA');
+
+    WHEN EX_OBSERVACAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_HISTORICO_PESO',SQLCODE,'OBSERVACAO NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_HISTORICO_PESO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure lembrete
+CREATE OR REPLACE PROCEDURE SP_INSERIR_LEMBRETE (
+    p_id               IN INTEGER,
+    p_tipo             IN VARCHAR2,
+    p_descricao        IN CLOB,
+    p_data_prevista    IN DATE,
+    p_status           IN CHAR,
+    p_fidelis_tutor_id IN INTEGER,
+    p_fidelis_pet_id   IN INTEGER
+)
+AS
+    EX_TIPO_VAZIO       EXCEPTION;
+    EX_DESCRICAO_VAZIA  EXCEPTION;
+    EX_DATA_VAZIA       EXCEPTION;
+    EX_STATUS_INVALIDO  EXCEPTION;
+BEGIN
+    IF p_tipo IS NULL THEN RAISE EX_TIPO_VAZIO;
+    END IF;
+
+    IF p_descricao IS NULL THEN RAISE EX_DESCRICAO_VAZIA;
+    END IF;
+
+    IF p_data_prevista IS NULL THEN RAISE EX_DATA_VAZIA;
+    END IF;
+
+    IF p_status NOT IN ('A','I') THEN
+        RAISE EX_STATUS_INVALIDO;
+    END IF;
+
+    INSERT INTO FIDELIS_LEMBRETE (id,tipo,descricao,data_prevista,status,FIDELIS_TUTOR_id,FIDELIS_PET_id)
+    VALUES (p_id,p_tipo,p_descricao,p_data_prevista,p_status,p_fidelis_tutor_id,p_fidelis_pet_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'LEMBRETE INSERIDO COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_TIPO_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,'TIPO NAO INFORMADO');
+
+    WHEN EX_DESCRICAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,'DESCRICAO NAO INFORMADA');
+
+    WHEN EX_DATA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,'DATA PREVISTA NAO INFORMADA');
+
+    WHEN EX_STATUS_INVALIDO THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,'STATUS INVALIDO');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_LEMBRETE',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure recomendacao
+CREATE OR REPLACE PROCEDURE SP_INSERIR_RECOMENDACAO (
+    p_id                IN INTEGER,
+    p_tipo              IN VARCHAR2,
+    p_descricao         IN CLOB,
+    p_data_recomendacao IN DATE,
+    p_fidelis_pet_id    IN INTEGER
+)
+AS
+    EX_TIPO_VAZIO       EXCEPTION;
+    EX_DESCRICAO_VAZIA  EXCEPTION;
+    EX_DATA_VAZIA       EXCEPTION;
+BEGIN
+    IF p_tipo IS NULL THEN RAISE EX_TIPO_VAZIO;
+    END IF;
+
+    IF p_descricao IS NULL THEN RAISE EX_DESCRICAO_VAZIA;
+    END IF;
+
+    IF p_data_recomendacao IS NULL THEN RAISE EX_DATA_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_RECOMENDACAO (id,tipo,descricao,data_recomendacao,FIDELIS_PET_id)
+    VALUES (p_id,p_tipo,p_descricao,p_data_recomendacao,p_fidelis_pet_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'RECOMENDACAO INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_RECOMENDACAO',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_TIPO_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_RECOMENDACAO',SQLCODE,'TIPO NAO INFORMADO');
+
+    WHEN EX_DESCRICAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_RECOMENDACAO',SQLCODE,'DESCRICAO NAO INFORMADA');
+
+    WHEN EX_DATA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_RECOMENDACAO',SQLCODE,'DATA DA RECOMENDACAO NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_RECOMENDACAO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure vacinacao
+CREATE OR REPLACE PROCEDURE SP_INSERIR_VACINACAO (
+    p_id                    IN INTEGER,
+    p_data_aplicacao        IN DATE,
+    p_data_proxima          IN DATE,
+    p_vacina_aplicada       IN VARCHAR2,
+    p_observacao            IN CLOB,
+    p_fidelis_pet_id        IN INTEGER,
+    p_fidelis_veterinario_id IN INTEGER
+)
+AS
+    EX_DATA_APLICACAO_VAZIA    EXCEPTION;
+    EX_DATA_PROXIMA_VAZIA      EXCEPTION;
+    EX_VACINA_VAZIA            EXCEPTION;
+BEGIN
+    IF p_data_aplicacao IS NULL THEN RAISE EX_DATA_APLICACAO_VAZIA;
+    END IF;
+
+    IF p_data_proxima IS NULL THEN RAISE EX_DATA_PROXIMA_VAZIA;
+    END IF;
+
+    IF p_vacina_aplicada IS NULL THEN RAISE EX_VACINA_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_VACINACAO (id,data_aplicacao,data_proxima,vacina_aplicada,observacao,FIDELIS_PET_id,FIDELIS_VETERINARIO_id)
+    VALUES (p_id,p_data_aplicacao,p_data_proxima,p_vacina_aplicada,p_observacao,p_fidelis_pet_id,p_fidelis_veterinario_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'VACINACAO INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_VACINACAO',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_DATA_APLICACAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_VACINACAO',SQLCODE,'DATA DE APLICACAO NAO INFORMADA');
+
+    WHEN EX_DATA_PROXIMA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_VACINACAO',SQLCODE,'DATA PROXIMA NAO INFORMADA');
+
+    WHEN EX_VACINA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_VACINACAO',SQLCODE,'VACINA NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_VACINACAO',SQLCODE,SQLERRM);
+END;
+/
+
+-- procedure vermifugacao
+CREATE OR REPLACE PROCEDURE SP_INSERIR_VERMIFUGACAO (
+    p_id                    IN INTEGER,
+    p_produto               IN VARCHAR2,
+    p_data_aplicacao        IN DATE,
+    p_data_proxima          IN DATE,
+    p_fidelis_pet_id        IN INTEGER,
+    p_fidelis_veterinario_id IN INTEGER
+)
+AS
+    EX_PRODUTO_VAZIO         EXCEPTION;
+    EX_DATA_APLICACAO_VAZIA  EXCEPTION;
+    EX_DATA_PROXIMA_VAZIA    EXCEPTION;
+BEGIN
+    IF p_produto IS NULL THEN RAISE EX_PRODUTO_VAZIO;
+    END IF;
+
+    IF p_data_aplicacao IS NULL THEN RAISE EX_DATA_APLICACAO_VAZIA;
+    END IF;
+
+    IF p_data_proxima IS NULL THEN RAISE EX_DATA_PROXIMA_VAZIA;
+    END IF;
+
+    INSERT INTO FIDELIS_VERMIFUGACAO (id,produto,data_aplicacao,data_proxima,FIDELIS_PET_id,FIDELIS_VETERINARIO_id)
+    VALUES (p_id,p_produto,p_data_aplicacao,p_data_proxima,p_fidelis_pet_id,p_fidelis_veterinario_id);
+
+    DBMS_OUTPUT.PUT_LINE(
+        'VERMIFUGACAO INSERIDA COM SUCESSO'
+    );
+EXCEPTION
+    WHEN DUP_VAL_ON_INDEX THEN
+        SP_LOG_ERRO('SP_INSERIR_VERMIFUGACAO',SQLCODE,'ID DUPLICADO');
+
+    WHEN EX_PRODUTO_VAZIO THEN
+        SP_LOG_ERRO('SP_INSERIR_VERMIFUGACAO',SQLCODE,'PRODUTO NAO INFORMADO');
+
+    WHEN EX_DATA_APLICACAO_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_VERMIFUGACAO',SQLCODE,'DATA DE APLICACAO NAO INFORMADA');
+
+    WHEN EX_DATA_PROXIMA_VAZIA THEN
+        SP_LOG_ERRO('SP_INSERIR_VERMIFUGACAO',SQLCODE,'DATA PROXIMA NAO INFORMADA');
+
+    WHEN OTHERS THEN
+        SP_LOG_ERRO('SP_INSERIR_VERMIFUGACAO',SQLCODE,SQLERRM);
 END;
 /
 
